@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  color-scheme: light dark;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+}
+
+/***  Main Container Styling  ***/
+.App {
+  margin: 0 auto;
+  max-width: 550px;
+  background: #F5F7FB;
+  color: #293264;
+  position: relative;
+  min-height: 509px;
+  overflow: hidden;
+}
+
+/***  Intro Page Styling  ***/
+.intro-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+.intro-page-title {
+  font-size: 31.25px;
+  line-height: 37px;
+}
+.intro-page-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.btn {
+  color: #F5F7FB;
+  background: #4D5B9E;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 15px;
+  padding: 1rem 2rem;
+}
+.intro-page-img {
+  display: block;
+  width: 297px;
+  height: 235px;
+}
+.intro-page-img-div-top-right {
+  position: absolute;
+  width: 297px;
+  height: 235px;
+  top: 0%;
+  right: 0%;
+  transform: scale(1) translate(40%, -40%);
+}
+.intro-page-img.top-right {
+  transform: scale(1) translate(-10%, 15.5%)
+}
+.intro-page-img-div-bottom-left {
+  position: absolute;
+  width: 297px;
+  height: 235px;
+  bottom: 0%;
+  left: 0%;
+  transform: scale(1) translate(-50%, 35%)
+}
+.game-started-top {
+  transition: all 1s;
+  transform: scale(1) translate(65%, -70%);
+}
+.game-started-bottom {
+  transition: all 1s;
+  transform: scale(1) translate(-75%, 70%)
+}
+
+/***  Selection Page Styles  ***/
+.selection-page {
+  padding: 5rem 1.7rem;
+}
+.selection-page-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.selection-page-form div {
+  display: flex;
+  flex-direction: column;
+}
+.selection-page-form-label {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: normal;
+}
+.selection-page-form-input {
+  outline: none;
+  height: 2rem;
+  padding: 0 5px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  color: #293264;
+  border: 1px solid;
+}
+.selection-page-form-input.number {
+  border: 1px solid;
+}
+#selection-page-form-btns, #question-page-btns {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.125rem, 1fr));
+  place-items: center;
+  gap: 10px;
+}
+/* .selection-page-btn {
+  This style is not needed for now
+} */
+
+/**---- Questions and Answers Pages Styles -----**/
+.questions-and-answers-div {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 1.7rem;
+}
+.question-and-answer {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #DBDEF0;
+}
+.question-and-answer:not(:first-child) {
+  padding-top: 1.5rem;
+}
+.answers-div {
+  display: grid;
+  align-items: center;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  margin-top: 10px;
+}
+.answer {
+  width: fit-content;
+  border: 1px solid #4D5B9E;
+  border-radius: 7.94239px;
+  padding: 0 0.5rem;
+  font-weight: normal;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+#question-page-btns {
+  margin-top: 20px;
+}
+.selected-answer {
+  background: #D6DBF5;
+}
+.checked-answer {
+  border: 1px solid #8b92b9;
+  color: #8b92b9;
+}
+.correct-answer {
+  background: #94D7A2;
+  border: 1px solid #94D7A2;
+  color: #293264;
+}
+.wrong-answer {
+  background: #F8BCBC;
+  border: 1px solid #F8BCBC;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
