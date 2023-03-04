@@ -16,7 +16,7 @@ export default function SelectionPage(props) {
                         className='selection-page-form-input number' 
                         name='amount'
                         type='number' 
-                        placeholder='Number of Questions to get'
+                        placeholder='Number of Questions to get (max: 50)'
                         onChange={(event) => props.handleSearchParamsChange(event)}
                         min='1'
                         max='50'
