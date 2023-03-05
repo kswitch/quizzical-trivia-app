@@ -10,7 +10,7 @@ import AnswersPage from './AnswersPage'
 export default function App() {
 
   /**-- All states and consts Listed here --**/
-  const [formData, setFormoData] = useState({
+  const [formData, setFormData] = useState({
     amount: '',
     category: '',
     difficulty: '',
@@ -121,7 +121,7 @@ export default function App() {
   function handleSearchParamsChange (event) {
     const {name, value, type} = event.target
 
-    setFormoData(prevFormData => {
+    setFormData(prevFormData => {
         return {...prevFormData, [name]: (type === 'number') ? Number(value) : value }
     })
   }
@@ -143,7 +143,7 @@ export default function App() {
   }
 
   function stopTriviaGame () {
-    setFormoData({
+    setFormData({
       amount: '',
       category: '',
       difficulty: '',
