@@ -51,6 +51,7 @@
   border: none;
   border-radius: 15px;
   padding: 1rem 2rem;
+  cursor: pointer;
 }
 .intro-page-img {
   display: block;
